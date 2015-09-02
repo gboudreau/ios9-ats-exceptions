@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Ref: https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/ -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            
+            <!-- Maybe you don't have a valid certificate on your own development/staging servers. But you should. Really. -->
+            <key>dev.your-own-server.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+            </dict>
+            
+            <!-- Facebook | Ref: https://developers.facebook.com/docs/ios/ios9 -->
+            <key>facebook.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            <key>fbcdn.net</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            <key>akamaihd.net</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            
+            <!-- Paypal | Ref: https://github.com/paypal/PayPal-iOS-SDK/commit/0281e727ae5cafc07129b77a48b7184b36a14dc0 -->
+            <key>www.paypalobjects.com</key>
+            <dict>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            <key>paypal.com</key>
+            <dict>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+            
+            <!-- Mapbox | Ref: https://github.com/mapbox/mapbox-gl-native/commit/0178c94f6d79891d81468a69673263fa62ebcb9c -->
+            <key>cloudfront-staging.tilestream.net</key>
+            <dict>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            
+        </dict>
+    </dict>
+</dict>
+</plist>
