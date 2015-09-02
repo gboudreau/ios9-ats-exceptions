@@ -31,3 +31,11 @@ If you know of any other services that published recommendations for exceptions 
 ## How can I test if my servers will work with ATS enabled, or what exceptions I might need?
 
 `nscurl --ats-diagnostics https://api.your-server.com`
+
+
+## Interesting reads
+
+In no particular order:
+
+- http://ste.vn/2015/06/10/configuring-app-transport-security-ios-9-osx-10-11/
+- http://product.reverb.com/2015/06/29/ios-9-and-charles-proxy/
