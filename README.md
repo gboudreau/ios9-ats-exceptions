@@ -28,3 +28,6 @@ In the ats.plist file in this repo, you'll find the exceptions that you need to 
 
 If you know of any other services that published recommendations for exceptions that should be used in iOS 9 apps, for their service to work as expected, please fork and create a pull request.
 
+## How can I test if my servers will work with ATS enabled, or what exceptions I might need?
+
+`nscurl --ats-diagnostics https://api.your-server.com`
