@@ -59,6 +59,14 @@
                 <false/>
             </dict>
             
+            <!-- Amazon S3 -->
+            <key>s3.amazonaws.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
         </dict>
     </dict>
 </dict>
